@@ -5,31 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <style>
     body {
-        background-color: red;
+        background-color: green;
         padding: 0%;
         margin: 0%;
         scroll-behavior: smooth;
+        font-family: verdana;
     }
 
-    .myframe {
-        background-color: green;
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
+    .myIntro {
         display: flex;
-        position: fixed;
+        background-color: yellow;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        scroll-behavior: smooth;
     }
 </style>
 
 <body>
-    <div class="myframe">
-        <iframe src="home/index.html" frameborder="0" width="100%" height="100%" title="rp-imt"></iframe>
+    <div class="QuarterOption">
+        <div class="OptionBorder">
+        </div>
+        <div class="OptionItem1" onclick="document.location='Quarter/Featured Video.html'">
+            <H3>Featured Videos</H3>
+        </div>
+        <div class="OptionItem" onclick="document.location='Quarter/First Quarter.html'">
+            <H3>First Quarter</H3>
+        </div>
+        <div class="OptionItem" onclick="document.location='Quarter/Second Quarter.html'">
+            <H3>Second Quarter</H3>
+        </div>
+        <div class="OptionItem" onclick="document.location='Quarter/Third Quarter.html'">
+            <H3>Third Quarter</H3>
+        </div>
+        <div class="OptionItem" onclick="document.location='Quarter/Fourth Quarter.html'">
+            <H3>Fourth Quarter</H3>
+        </div>
+        <div class="OptionItem1" onclick="document.location='Quarter/Web Reviewer.html'">
+            <H3>Web Reviewer</H3>
+        </div>
+     </div>
+    <div class="myIntro" onclick="hideIntro()">
+        <div class="logo">
+            <img src="images/RP-IMT 4 LOGO.png" alt="RP-IMT">
+        </div>
+        <div class="School">
+            <h2>RP-IMT LINKS</h2>
+        </div>
     </div>
 
+
+    <script src="Links Script.js"></script>
 </body>
 
 </html>
