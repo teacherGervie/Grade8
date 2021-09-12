@@ -1,0 +1,96 @@
+.mainContent{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: lightgreen;
+    width: 100%;
+    height: 100%;
+}
+.mainContent .topBar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: yellow;
+
+}
+.mainContent .topBar .home{
+    color: blue;
+    padding: 0% 10px;
+}
+/* CONTENT */
+.mainContent .information .myTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+
+.mainContent .information .video{
+    background-color: blue;
+}
+/* LINK */
+.mainContent .links{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+
+}
+.mainContent .links .linkContainer{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    background-color: lightgreen;
+}
+.mainContent .links a{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: red;
+    width: 100%;
+    height: max-content;
+    text-decoration: none;
+}
+.mainContent .links  .linktop{
+    display: flex;
+    position: relative;
+    /* background-color: red; */
+    width: 100;
+    height: 10px;
+
+}
+.mainContent .links .linkContainer .content1{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: brown;
+    color: white;
+    width: 50%;
+    height: 20px;
+
+    margin-left: 20px;
+    padding: 10px; 
+    border-radius: 10px;
+    border-width: 4px;
+    z-index: 2;
+}
+.mainContent .links .linkContainer .content2{
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: darkgreen;
+    width: 86vw;
+    height: 50px;
+    margin: -16px 0px 10px 10px;
+    border-radius: 10px;
+    background-color: yellow;
+    border-color: brown;
+    border-style: solid;
+    font-weight: bold;
+    padding: 0% 10px;
+ }
