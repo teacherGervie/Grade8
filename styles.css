@@ -1,0 +1,68 @@
+body {
+    margin: 0px;
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.topBar .myLogo {
+    display: flex;
+    margin: 10px 10px;
+
+}
+
+.topBar .LogoName {
+
+    color: darkblue;
+
+}
+.topBar .LogoName h1{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+.Quarter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    margin: auto;
+}
+.Quarter .QuarterItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 10px;
+}
+.Quarter .QuarterItem a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: blue;
+    width: 80%;
+
+    text-decoration: none;
+    user-select: none;
+    text-align: center;
+
+    border: 4px solid;
+    border-radius: 10px;
+    border-color: darkblue;
+    color: white;
+
+}
+
