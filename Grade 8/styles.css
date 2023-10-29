@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.topBar .myLogo {
+    display: flex;
+    margin: 10px 10px;
+
+}
+
+.topBar .LogoName {
+
+    color: darkblue;
+
+}
+.topBar .LogoName h1{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+   
+}
+.contentBox .contentItem {
+    width: 80%;
+    background-color: lightgoldenrodyellow;
+    border: 4px green solid;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+
+}
+.contentBox .contentItem a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    text-decoration: none;
+    user-select: none;
+    color: green;
+}
+.contentBox .contentItem a .myItem2{
+    border: 3px blue solid;
+    border-radius: 15px;
+    margin: 5px 0px;
+    background-color: aqua;
+    color: blue;
+}
+
+.contentBox .contentItem a .myItem2 h2{
+    margin: 0px;
+    margin: 0px 15px;
+
+}

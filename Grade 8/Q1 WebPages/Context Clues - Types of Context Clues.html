@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP-IMT</title>
+    <style>
+         body {
+            position: relative;
+            background-color: lightcyan;
+            font-family: 'Arial', 'Franklin Gothic Medium', 'Arial Narrow', 'sans-serif';
+            background-color: darkblue;
+            width: 100vw;
+            margin: 0px;
+        }
+
+        .topBar {
+            display: flex;
+            flex-direction: center;
+            background-color: lightskyblue;
+            color: darkblue;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+
+        .Dgroup {
+            position: absolute;
+            background-color: red;
+        }
+
+        .RP_IMT {
+            display: flex;
+            flex-direction: center;
+            margin: auto;
+        }
+
+        .Dgroup1 {
+            position: absolute;
+            width: 100vw;
+            background-color: lightgreen;
+        }
+
+        .Dgroup2 {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .Dgroup3 {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* width: inherit; */
+            visibility: hidden;
+        }
+
+        .DGroupQuestion {
+            display: flex;
+            flex-direction: column;
+            background-color: lightcyan;
+            width: 100vw;
+        }
+
+        .DQuestion {
+            display: flex;
+            flex-direction: center;
+            background-color: green;
+        }
+
+        .Dmyquestion {
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+            margin: auto;
+            color: yellow;
+        }
+		.Dmyquestion p{
+            font-size: 26px;
+			margin: 10px;
+        }
+
+        .DOption {
+            display: flex;
+            flex-direction: column;
+            background-color: darkgreen;
+            color: white;
+            align-items: center;
+            padding: 10px 0px 0px 0px;
+        }
+
+        .DOption1 {
+            display: flex;
+            flex-direction: center;
+            margin: 10px;
+
+            border-radius: 20px;
+            border: 4px;
+            border-color: greenyellow;
+            border-style: solid;
+
+            color: lightgoldenrodyellow;
+            background-color: green;
+            width: 90%;
+        }
+
+        h2 {
+            width: 100vw;
+            text-align: center;
+            user-select: none;
+        }
+
+        h1 {
+            user-select: none;
+        }
+
+        .DnextQuestion {
+            position: absolute;
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            opacity: 10%;
+            visibility: hidden;
+        }
+
+        .myForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: lightgreen;
+            background-color: darkgreen;
+            margin: 5%;
+            border-radius: 20px;
+        }
+
+        .myFormBorder {
+            border: yellow;
+        }
+
+        input {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .myInformation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: darkblue;
+            margin: 10px 0px;
+        }
+
+        .myInformation h2 {
+            margin: 0px;
+        }
+
+        .Dgroup .Dgroup3 .myInformation {
+            color: darkblue;
+            background-color: lightblue;
+        }
+
+        .Dgroup .Dgroup3 .callinfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+        }
+
+        .Dgroup .Dgroup3 .DScore {
+            width: 300px;
+            color: darkgreen;
+            align-items: center;
+            align-content: center;
+            border: 4px;
+            border-color: yellow;
+            border-radius: 20px;
+            border-style: solid;
+            background-color: lightgreen;
+        }
+
+        .Dgroup .Dgroup3 .DScore h1 {
+            text-align: center;
+        }
+
+        .Dgroup .Dgroup3 .InfoTitle {
+            display: flex;
+
+            background-color: lightblue;
+            color: darkblue;
+            margin: 10px 0px;
+            width: 80%;
+
+            border: darkblue;
+            border-radius: 10px;
+            border: 4px;
+            border-style: solid;
+        }
+		
+    </style>
+</head>
+
+<body>
+    <div class="topBar">
+        <div class="RP_IMT">
+            <h1>Blue Guronasyon</h1>
+        </div>
+    </div>
+
+    <div class="Dgroup">
+        <div id="myDgroup3" class="Dgroup3">
+            <div class="callinfo">
+		
+                <div class="myInformation">
+                    <h2 id="Score_StudentName">student Name</h2>
+                    <h2 id="Score_Section">Section</h2>
+                </div>
+		
+                <div class="InfoTitle">
+                    <h2 id="Score_myTitle">my Title</h2>
+                </div>
+				
+            </div>
+
+            <div class="DScore">
+                <h1 id="Score"> Score</h1>
+            </div>
+			
+        </div>
+
+        <div id="myDgroup2" class="Dgroup2">
+            <div class="DGroupQuestion">
+                
+				<div>
+                    <div class="myInformation">
+                        <h2 id="StudentName">student Name</h2>
+                        <h2 id="myTitle">my Title</h2>
+                    </div>
+                </div>
+
+                <div class="DQuestion">
+                    <div class="Dmyquestion">
+                        <p id="Question">Question</p>
+                    </div>
+                </div>
+				
+                <div class="DOption">
+                    <div onclick="checkAnswer('.myOption1')" class="DOption1 myOption1">
+                        <h2 id="Option1">option 1</h2>
+                    </div>
+                    <div onclick="checkAnswer('.myOption2')" class="DOption1 myOption2">
+                        <h2 id="Option2">option 2</h2>
+                    </div>
+                    <div onclick="checkAnswer('.myOption3')" class="DOption1 myOption3">
+                        <h2 id="Option3">option 3</h2>
+                    </div>
+                    <div onclick="checkAnswer('.myOption4')" class="DOption1 myOption4">
+                        <h2 id="Option4">option 4</h2>
+                    </div>
+                </div>
+				
+                <div id="nextQuestion" class="DnextQuestion" onclick="FNextQuestion()">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="myDgroup1" class="Dgroup1">
+            <div class="myFormBorder">
+                <div class="myForm">
+                    <div>
+                        <h2>Student Name</h2>
+                    </div>
+                    <div>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div>
+                        <h2>Grade and Section</h2>
+                    </div>
+                    <div>
+                        <input type="text" id="fsection" name="fsection">
+                    </div>
+                    <div onclick="FDgroup1()">
+                        <h1>start</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+	
+		const Questions1 = ["Rena shouts <u>continuously</u> or all the time, and it makes me uncomfortable.", "Synonyms"];
+const Questions2 = ["The director felt <u>remorse</u> or shame, for hiring some incompetent employees.", "Synonyms"];
+const Questions3 = ["<u>Ossicles</u> are the three small bones in the middle ear.", "Definition"];
+const Questions4 = ["Her voice is <u>inaudible</u>; no one could hear it.", "Definition"];
+const Questions5 = ["Jhonathan is <u>gregarious</u> unlike his shy brother.", "Antonyms"];
+const Questions6 = ["The <u>feral</u> cat would scratch the wall, unlike the friendly cat.", "Antonyms"];
+const Questions7 = ["<u>Mammals</u>, including elephants, horse, and carabaos are helpful animals.", "Example"];
+const Questions8 = ["As a country in the Pacific Ring of Fire, the Philippines always experience different <u>natural calamities</u> such as typhoons, earthquakes, and tsunamis.", "Example"];
+const Questions9 = ["The government has implemented the community <u>quarantine</u> because experts want to stop or slow down the increase in the number of COVID-19 cases.", "Cause-and-effect"];
+const Questions10 = ["I love the <u>palate</u> of pasta like my brother who loves the taste of pansit.", "Comparison"];
+const Questions11 = ["Jonna is fond of mountain <u>escapade</u> the same way with Patrick who goes on beach adventure.", "Comparison"];
+const Questions12 = ["I wish I had earplugs to avoid monkey's <u>vociferous</u> noise.", "Inference"];
+const Questions13 = ["The criminal's <u>beligerance</u> led to the death of four innocent children", "Inference"];
+const QCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const OptionCount = [1, 2, 3, 4];
+var setMyTitle = "Context Clues - Types of Context Clues";	
+        var questionCount = 0;
+        var totalQuestions = QCount.length;
+        var totalOptions = OptionCount.length;
+        var selectedAnswer = "Answer";
+        var correctAnswer = "Answer";
+        var setStudentname = "StudentName";
+        var setSection = "Section";
+        var scoreCount = 0;
+        var setAddScore = true;
+        var optionlist = ["myList"];
+        var Questionlist = ["myQuestions"];
+        var tempoption = "temp";
+		
+		setOptionBox()
+        function setOptionBox() {
+            for (var i2 = 4; i2 > totalOptions; i2--) {
+                document.querySelector(".myOption" + [i2]).style.visibility = "hidden";
+            }
+        }
+		
+        makeList()
+        function makeList() {
+            for (var i = 1; i <= totalQuestions; i++) {
+                optionlist[i - 1] = eval("Questions" + i)[1];
+            }
+            removeDuplicate(optionlist);
+            makeQuestions();
+        }
+		
+        function makeQuestions() {
+            for (var i = 1; i <= totalQuestions; i++) {
+                makeOption(i);
+            }
+        }
+		
+        function removeDuplicate(data1) { data1.sort(); var i = 0; while (i < data1.length) { while (i < data1.length + 1 && data1[i] == data1[i + 1]) { data1.splice(i, 1); } i++; } }
+        ShuffleArray(QCount);
+        function ShuffleArray(input) {
+            for (var i = input.length - 1; i >= 0; i--) {
+                var randomIndex = Math.floor(Math.random() * (i + 1));
+                var itemAtIndex = input[randomIndex];
+                input[randomIndex] = input[i];
+                input[i] = itemAtIndex;
+            }
+        }
+		
+        function makeOption(data1) {
+            i = 1;
+            while (i <= totalQuestions) {
+                if (optionlist[i - 1] == eval("Questions" + data1)[1]) {
+                    tempoption = optionlist.splice(i - 1, 1);
+                    break;
+                }
+                i++;
+            }
+            ShuffleArray(optionlist)
+            makeQuestion(data1);
+            optionlist.push(tempoption);
+        }
+		
+        function makeQuestion(data1) {
+            Questionlist[data1] = [eval("Questions" + data1)[0], tempoption];
+            i = 0;
+            var myCount = Math.min((optionlist.length), 3);
+            while (i < myCount) {
+                Questionlist[data1][i + 2] = optionlist[i];
+                i++;
+            }
+        }
+		
+        setQuestion(QCount[questionCount]);
+        function setQuestion(data1) {
+            ShuffleArray(OptionCount);
+            document.getElementById('Question').innerHTML = (questionCount + 1) + ". " + Questionlist[data1][0];
+           	setOptionCount(data1)
+        }
+		
+		function setOptionCount(data1){
+			for (var i = 1; i <= totalOptions; i++) {
+				document.getElementById("Option"+i).innerHTML = Questionlist[data1][OptionCount[(i-1)]];
+			}
+			for(var i2 = 4; i2 > totalOptions; i2--){
+                document.querySelector(".myOption"+[i2]).style.visibility = "hidden"
+            }
+		}
+
+        function checkAnswer(data1) {
+            selectedAnswer = document.querySelector(data1).innerText;
+            correctAnswer = eval("Questions" + QCount[questionCount])[1];
+            if (correctAnswer == selectedAnswer) {
+                document.querySelector(data1).style.backgroundColor = "greenyellow";
+                document.querySelector(data1).style.color = "green";
+                addScore();
+                document.getElementById("nextQuestion").style.visibility = "visible";
+            } else {
+                document.querySelector(data1).style.backgroundColor = "red";
+                setAddScore = false;
+            }
+        }
+
+        function addScore() {
+            if (setAddScore == true) {
+                scoreCount = scoreCount + 1;
+            } else {
+            }
+        }
+        function FDgroup1() {
+            setStudentname = document.getElementById('fname').value;
+            setSection = document.getElementById('fsection').value
+            if (setStudentname.length <= 1) {
+
+            } else {
+                document.getElementById("myDgroup1").style.visibility = "hidden";
+                document.getElementById("myDgroup2").style.visibility = "visible";
+                document.getElementById('StudentName').innerText = setStudentname;
+                document.getElementById('myTitle').innerText = setMyTitle;
+            }
+            // var ip = location.host;
+            // alert(ip);
+        }
+		
+        function FNextQuestion() {
+            resetOption();
+            questionCount = questionCount + 1;
+            if (questionCount >= totalQuestions) {
+                document.getElementById("myDgroup2").style.visibility = "hidden";
+                document.getElementById("myDgroup3").style.visibility = "visible";
+
+                document.getElementById('Score_StudentName').innerText = setStudentname;
+                document.getElementById('Score_myTitle').innerText = setMyTitle;
+                document.getElementById('Score_Section').innerText = setSection;
+                document.getElementById('Score').innerText = scoreCount +" / "+totalQuestions;;
+
+            } else {
+                setQuestion(QCount[questionCount]);
+            }
+            document.getElementById("nextQuestion").style.height = "100%";
+            document.getElementById("nextQuestion").style.visibility = "hidden";
+        }
+		
+        function resetOption() {
+            setAddScore = true;
+            for (var i = 1; i <= 4; i++) {
+                document.querySelector('.myOption' + i).style.backgroundColor = "green";
+                document.querySelector('.myOption' + i).style.color = "lightcyan";
+            }
+        }
+    </script>
+</body>
+</html>
